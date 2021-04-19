@@ -35,3 +35,10 @@ pip install --user ipykernel
 python -m ipykernel install --user --name=NLP-project
 ```
 
+## 5. Remove environment
+
+```Shell
+python -m ipykernel install --user --name=NLP-project
+```
+
+
