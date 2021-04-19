@@ -28,6 +28,10 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c cond
 ## 4. Creating jupyter notebook kernel for connecting to the environment 
 
 ```Shell
+conda install -c anaconda ipykernel
+```
+
+```Shell
 pip install --user ipykernel
 ```
 
