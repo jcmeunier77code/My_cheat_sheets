@@ -38,6 +38,10 @@ python -m ipykernel install --user --name=NLP-project
 ## 5. Remove environment
 
 ```Shell
+conda deactivate
+```
+
+```Shell
 conda env remove -n NLP-project
 ```
 
