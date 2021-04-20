@@ -39,7 +39,7 @@ pip install --user ipykernel
 python -m ipykernel install --user --name=NLP-project
 ```
 
-## 5. Remove environment
+## 5. Remove environment and kernel
 
 ```Shell
 conda deactivate
@@ -47,6 +47,18 @@ conda deactivate
 
 ```Shell
 conda env remove -n NLP-project
+```
+
+```Shell
+jupyter kernelspec list
+```
+
+```Shell
+jupyter kernelspec list
+```
+
+```Shell
+jupyter kernelspec uninstall unwanted-kernel
 ```
 
 
