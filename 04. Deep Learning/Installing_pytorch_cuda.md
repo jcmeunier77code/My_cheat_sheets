@@ -58,7 +58,7 @@ jupyter kernelspec list
 ```
 
 ```Shell
-jupyter kernelspec uninstall unwanted-kernel
+jupyter kernelspec uninstall nlp-project
 ```
 
 
