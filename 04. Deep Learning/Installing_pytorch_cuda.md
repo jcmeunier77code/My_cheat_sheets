@@ -61,4 +61,16 @@ jupyter kernelspec list
 jupyter kernelspec uninstall nlp-project
 ```
 
+## 6. What eventually worked with cuda version on my laptop
+
+
+```Shell
+(base) C:\Users\jcmeu>conda create -n NLP-project python=3.8
+(base) C:\Users\jcmeu>conda activate NLP-project
+
+(NLP-project) C:\Users\jcmeu>conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 -c pytorch
+(NLP-project) C:\Users\jcmeu>conda install -c anaconda ipykernel
+(NLP-project) C:\Users\jcmeu>python -m ipykernel install --user --name=NLP-project
+```
+
 
