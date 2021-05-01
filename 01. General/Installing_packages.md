@@ -1,4 +1,4 @@
-# Installing pytorch with conda
+# Installing packages
 
 
 ## 1. pip freeze   
