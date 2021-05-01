@@ -3,7 +3,7 @@
 
 ## 1. Update conda version  
 
-```Shell
+```Python
 conda update -n base -c defaults conda
 ```
 
