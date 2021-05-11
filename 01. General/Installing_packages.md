@@ -38,3 +38,10 @@ pip install -r requirements.txt -y
 python -m pip uninstall package-name
 python -m pip install package-name
 ```
+
+## 4. Installing a repo as a package 
+
+
+```Shell
+pip install git+https://github.com/deepak1725/fabric8-analytics-worker.git@master
+```
