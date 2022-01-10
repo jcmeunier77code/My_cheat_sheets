@@ -28,7 +28,7 @@ me@laptop:~$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 
 2. Save it to default location: (/home/*user_name*/.ssh/id_rsa): 
-
+```console
 Enter passphrase (empty for no passphrase):[Leave blank and press `Enter`]
 Enter same passphrase again:[Leave blank and press `Enter`]
 Your identification has been saved in /c/Users/*user_name*/.ssh/id_ed25519
@@ -39,16 +39,17 @@ The key's randomart image is:
 +--[ED25519 256]--+
 |
 |
+```
 
 3. Check that the SSH key is created 
-```shell
-eval "$(ssh-agent -s)"
+```console
+me@laptop:~$ eval "$(ssh-agent -s)"
 ```
 Agent pid #### [four digits]
 
 4. Add the SSH key in the right location in your local machine
-```shell
- ssh-add ~/.ssh/id_ed25519
+```console
+ me@laptop:~$ ssh-add ~/.ssh/id_ed25519
  ```
 Identity added: /c/Users/*user_name*/.ssh/id_ed25519 (your_email@example.com)
 
@@ -56,14 +57,14 @@ Identity added: /c/Users/*user_name*/.ssh/id_ed25519 (your_email@example.com)
 
 1. Copy the content of the file to your clip
 With clip
-```shell
-clip < ~/.ssh/id_ed25519.pub
+```console
+me@laptop:~$ clip < ~/.ssh/id_ed25519.pub
 ```
 OR
 With xclip
-```shell
-sudo apt-get install xclip
-xclip -sel clip < ~/.ssh/id_rsa.pub
+```console
+me@laptop:~$ sudo apt-get install xclip
+me@laptop:~$ xclip -sel clip < ~/.ssh/id_rsa.pub
 ```
 
 2. On github, go to your **Settings** > **SSH and GPG keys** > **New SSH key**
