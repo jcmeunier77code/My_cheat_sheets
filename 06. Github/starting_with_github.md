@@ -44,14 +44,15 @@ The key's randomart image is:
 3. Check that the SSH key is created 
 ```console
 me@laptop:~$ eval "$(ssh-agent -s)"
-```
 Agent pid #### [four digits]
+```
+
 
 4. Add the SSH key in the right location in your local machine
 ```console
- me@laptop:~$ ssh-add ~/.ssh/id_ed25519
- ```
+me@laptop:~$ ssh-add ~/.ssh/id_ed25519
 Identity added: /c/Users/*user_name*/.ssh/id_ed25519 (your_email@example.com)
+ ```
 
 ### Add the SSH key to your github account
 
