@@ -1,4 +1,4 @@
-# Git & GitHub 101
+# Git & GitHub
 
 ## Install Git
 
