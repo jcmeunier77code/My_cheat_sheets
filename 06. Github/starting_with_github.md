@@ -14,8 +14,9 @@ sudo apt-get install git
 To login into github you need a **SSH-key**. Here is how to generate one.
 
 1. Create an SSH key linked to your email.
-```shell
-ssh-keygen -t ed25519 -C "your_email@example.com"
+
+```console
+me@laptop:~$ ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 OR
 ```shell
