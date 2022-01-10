@@ -17,14 +17,15 @@ To login into github you need a **SSH-key**. Here is how to generate one.
 
 ```console
 me@laptop:~$ ssh-keygen -t ed25519 -C "your_email@example.com"
-```
-OR
-```shell
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-```
 Generating public/private ed25519 key pair.
 Enter file in which to save the key (/c/Users/*user_name*/.ssh/id_ed25519):
 Created directory '/c/Users/*user_name*/.ssh'.
+```
+OR
+```console
+me@laptop:~$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
 
 2. Save it to default location: (/home/*user_name*/.ssh/id_rsa): 
 
