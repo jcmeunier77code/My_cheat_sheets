@@ -2,7 +2,10 @@
 
 ## Type of variables 
 
-<img width=“964” src=“https://github.com/jcmeunier77code/My_cheat_sheets/img/sql_var.png”>
+<img src=“https://github.com/jcmeunier77code/My_cheat_sheets/img/sql_var.png” width="800px" height="auto">
+<p align="center" font-size="20px">Figure 1. Home page of the app</p>
+<p align="center"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/img/sql_var.png"></p>
+
 
 ```Shell 
 sudo apt-get update
