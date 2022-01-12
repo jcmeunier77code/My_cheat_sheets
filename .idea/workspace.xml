@@ -1,23 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e7d0f08-6d00-4801-9bb8-7286ae246246" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Cheatsheets.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01. General/.ipynb_checkpoints/Built-in-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02. Python Libraries/.ipynb_checkpoints/Numpy-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/03. Machine Learning/.ipynb_checkpoints/Classification-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/03. Machine Learning/.ipynb_checkpoints/Clustering-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/03. Machine Learning/.ipynb_checkpoints/Regression-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04. Deep Learning/.ipynb_checkpoints/Enabling GPU for tensorflow and pytorch-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04. Deep Learning/.ipynb_checkpoints/Pytorch-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04. Deep Learning/.ipynb_checkpoints/Tensorflow NN and CNN deeplearning-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04. Deep Learning/.ipynb_checkpoints/Tensorflow Transfer Learning-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/05. Google Colab/.ipynb_checkpoints/Google colab-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" />
+    <list default="true" id="6e7d0f08-6d00-4801-9bb8-7286ae246246" name="Changes" comment="add img cheatsheets">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +11,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="23P45SVwF6R5PocUf93YTiaJFXR" />
   <component name="ProjectViewState">
@@ -46,6 +34,35 @@
       <option name="presentableId" value="Default" />
       <updated>1641622204494</updated>
     </task>
+    <task id="LOCAL-00001" summary="add cheatsheet">
+      <created>1641622906960</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1641622906960</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add cheatsheet">
+      <created>1641623135904</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1641623135904</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add img">
+      <created>1641961355431</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1641961355431</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add img cheatsheets">
+      <created>1641961557794</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1641961557794</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -58,5 +75,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add cheatsheet" />
+    <MESSAGE value="add img" />
+    <MESSAGE value="add img cheatsheets" />
+    <option name="LAST_COMMIT_MESSAGE" value="add img cheatsheets" />
   </component>
 </project>
