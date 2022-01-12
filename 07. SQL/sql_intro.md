@@ -2,7 +2,7 @@
 
 ## Type of variables 
 
-<img src=“https://github.com/jcmeunier77code/My_cheat_sheets/img/sql_var.png”>
+<img width=“964” src=“https://github.com/jcmeunier77code/My_cheat_sheets/img/sql_var.png”>
 
 ```Shell 
 sudo apt-get update
