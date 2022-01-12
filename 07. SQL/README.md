@@ -20,13 +20,14 @@
 
 ## Comparison operations
 
-= : equals
-<> : not equals
-> : greater than
-< : less than
->= : greater or equal
-<= : less than or equal
-
+```sql
+= -- equals
+<> -- not equals
+> -- greater than
+< -- less than
+>= -- greater or equal
+<= -- less than or equal
+```
 
 ## Creating a table
 
