@@ -27,6 +27,47 @@ CREATE TABLE STUDENT (
 );
 ```
 
+Alternative primary key statement 
+
+```sql
+CREATE TABLE Student (
+    student_id INT,
+    name_people VARCHAR(255),
+    major VARCHAR (255), 
+    PRIMARY KEY (student_id)
+);
+```
+
+```sql
+DESCRIBE Student;
+```
+
+```sql
+DROP TABLE Student
+```
+
+```sql
+ALTER TABLE Student ADD gpa DECIMAL(3, 2);
+```
+
+```sql
+ALTER TABLE Student DROP COLUMN gpa;
+```
+
+## Inserting data in a table
+
+
+```sql
+
+```
+
+```sql
+
+```
+
+
+
+
 
 ```Shell 
 sudo apt-get update
