@@ -1,6 +1,8 @@
 # SQL & PopSQL
 
-## Cheat sheets 
+## 1. General
+
+### Cheat sheets 
 
 <p align="center"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/07.%20SQL/SQL-Cheet-Sheet-1.png"></p>
 <p align="center" font-size="20px">Figure 1. Cheat sheet 1</p>
@@ -11,14 +13,12 @@
 <p align="center"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/07.%20SQL/SQL-Cheat-Sheet-3.png"></p>
 <p align="center" font-size="20px">Figure 3. Cheat sheet 3</p>
 
-
-## Type of variables 
+### Type of variables 
 
 <p align="center"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/07.%20SQL/sql_var.png"></p>
 <p align="center" font-size="20px">Figure 4. Type of SQL variables</p>
 
-
-## Comparison operations
+### Comparison operations
 
 ```sql
 = -- equals
@@ -29,7 +29,9 @@
 <= -- less than or equal
 ```
 
-## Creating a table
+## 2. Creating, updating and deleting data/table
+
+### Creating a table
 
 ```sql
 CREATE TABLE STUDENT (
@@ -90,7 +92,7 @@ ALTER TABLE Student ADD gpa DECIMAL(3, 2);
 ALTER TABLE Student DROP COLUMN gpa;
 ```
 
-## Inserting data in a table
+### Inserting data in a table
 
 Inserting a row
 ```sql
@@ -103,7 +105,7 @@ Inserting values for specific columns
 INSERT INTO Student(student_id, name) VALUES(1, 'jack');
 ```
 
-## Update data in table
+### Update data in table
 
 Changing label name
 ```sql
@@ -135,7 +137,7 @@ WHERE student_id = 5;
 SELECT * FROM Student;
 ```
 
-## Delete data in table
+### Delete data in table
 
 Deleting row(s)
 ```sql
@@ -147,6 +149,8 @@ Deleting all entries
 ```sql
 DELETE FROM Student 
 ```
+
+## 3. Queries
 
 
 
