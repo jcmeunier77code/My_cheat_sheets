@@ -17,6 +17,17 @@
 <p align="center"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/07.%20SQL/sql_var.png"></p>
 <p align="center" font-size="20px">Figure 4. Type of SQL variables</p>
 
+
+## Comparison operations
+
+= : equals
+<> : not equals
+> : greater than
+< : less than
+>= : greater or equal
+<= : less than or equal
+
+
 ## Creating a table
 
 ```sql
@@ -28,7 +39,6 @@ CREATE TABLE STUDENT (
 ```
 
 Alternative primary key statement 
-
 ```sql
 CREATE TABLE Student (
     student_id INT,
@@ -36,6 +46,31 @@ CREATE TABLE Student (
     major VARCHAR (255), 
     PRIMARY KEY (student_id)
 );
+```
+
+Setting columns specificity
+```sql
+CREATE TABLE Student (
+    student_id INT,
+    name_people VARCHAR(255) NOT NULL, --cannot have empty values
+    major VARCHAR (255) UNIQUE, --each entry must be distinct
+    minor VARCHAR (255) DEFAULT '20 ECTS', --set default value
+    PRIMARY KEY (student_id)
+);
+```
+
+Auto increment values for primary key
+```sql
+CREATE TABLE Student (
+    student_id INT AUTO_INCREMENT,
+    name_people VARCHAR(255),
+    major VARCHAR (255),
+    PRIMARY KEY (student_id)
+);
+```
+
+```sql
+INSERT INTO Student(name_people, major) VALUES ('helen, 'computer science');
 ```
 
 ```sql
@@ -56,15 +91,61 @@ ALTER TABLE Student DROP COLUMN gpa;
 
 ## Inserting data in a table
 
-
+Inserting a row
 ```sql
+INSERT INTO Student VALUES(1, 'jack', 'biology');
+INSERT INTO Student VALUES(2, 'kate', 'sociology');
+```
 
+Inserting values for specific columns
+```sql
+INSERT INTO Student(student_id, name) VALUES(1, 'jack');
+```
+
+## Update data in table
+
+Changing label name
+```sql
+UPDATE Student
+SET major = 'Bio'
+WHERE major = 'Biology';
 ```
 
 ```sql
-
+UPDATE Student
+SET major = 'Biochemistry'
+WHERE major = 'Biology' OR major = 'Chemistry';
 ```
 
+```sql
+UPDATE Student
+SET name_people = 'Tom', major = 'Undecided'
+WHERE student_id = 5;
+```
+
+Changing values based on other column value
+```sql
+UPDATE Student
+SET major = 'Computer science'
+WHERE student_id = 5;
+```
+
+```sql
+SELECT * FROM Student;
+```
+
+## Delete data in table
+
+Deleting row(s)
+```sql
+DELETE FROM Student 
+WHERE name_poeple = 'Tom'
+```
+
+Deleting all entries
+```sql
+DELETE FROM Student 
+```
 
 
 
