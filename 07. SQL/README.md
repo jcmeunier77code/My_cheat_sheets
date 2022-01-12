@@ -27,9 +27,17 @@
 < -- less than
 >= -- greater or equal
 <= -- less than or equal
+AND
+OR
+
 ```
 
 ## 2. Creating, updating and deleting data/table
+
+With simple/unique table
+
+<p align="center"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/07.%20SQL/sql_var.png"></p>
+<p align="center" font-size="20px">Figure 4. Type of SQL variables</p>
 
 ### Creating a table
 
@@ -152,7 +160,7 @@ DELETE FROM Student
 
 ## 3. Queries
 
-## Select
+### Select
 
 Simple select
 ```sql
@@ -196,6 +204,37 @@ ORDER BY major
 LIMIT 2;
 ```
 
+With filter
+```sql
+SELECT Student.name_people, Student.major
+FROM Student 
+ORDER BY major
+WHERE Student_id < 10 AND student_id > 2;
+```
 
+```sql
+SELECT Student.name_people, Student.major
+FROM Student 
+ORDER BY major
+WHERE Student_id <> 10;
+```
 
+```sql
+SELECT Student.name_people, Student.major
+FROM Student 
+ORDER BY major
+WHERE name_people IN ('Claire', 'Kate', 'Pierre');
+```
+
+```sql
+SELECT Student.name_people, Student.major
+FROM Student 
+ORDER BY major
+WHERE name_people IN ('Claire', 'Kate', 'Pierre') AND Student_id <> 10;
+```
+
+## 4. Working with more complex schema
+
+<p align="center"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/07.%20SQL/sql_var.png"></p>
+<p align="center" font-size="20px">Figure 4. Type of SQL variables</p>
 
