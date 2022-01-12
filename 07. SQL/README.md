@@ -36,8 +36,8 @@ OR
 
 With simple/unique table
 
-<p align="center"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/07.%20SQL/sql_var.png"></p>
-<p align="center" font-size="20px">Figure 4. Type of SQL variables</p>
+<p align="center"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/07.%20SQL/student.png"></p>
+<p align="center" font-size="20px">Figure 5. Simple table</p>
 
 ### Creating a table
 
@@ -235,6 +235,6 @@ WHERE name_people IN ('Claire', 'Kate', 'Pierre') AND Student_id <> 10;
 
 ## 4. Working with more complex schema
 
-<p align="center"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/07.%20SQL/sql_var.png"></p>
-<p align="center" font-size="20px">Figure 4. Type of SQL variables</p>
+<p align="center"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/07.%20SQL/Complex.png"></p>
+<p align="center" font-size="20px">Figure 6. Complex schema</p>
 
