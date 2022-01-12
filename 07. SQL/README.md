@@ -17,6 +17,16 @@
 <p align="center"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/07.%20SQL/sql_var.png"></p>
 <p align="center" font-size="20px">Figure 4. Type of SQL variables</p>
 
+## Creating a table
+
+'''sql
+CREATE TABLE STUDENT (
+    student_id INT PRIMARY KEY,
+    name_people VARCHAR(255),
+    major VARCHAR (255)
+);
+'''
+
 
 ```Shell 
 sudo apt-get update
