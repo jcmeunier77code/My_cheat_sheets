@@ -19,13 +19,13 @@
 
 ## Creating a table
 
-'''sql
+```sql
 CREATE TABLE STUDENT (
     student_id INT PRIMARY KEY,
     name_people VARCHAR(255),
     major VARCHAR (255)
 );
-'''
+```
 
 
 ```Shell 
