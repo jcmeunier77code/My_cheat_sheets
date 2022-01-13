@@ -341,12 +341,12 @@ INSERT INTO employee VALUES(107, 'Andy', 'Bernard', '1973-05-11', 'F', 11000, 10
 INSERT INTO branch_supplier VALUES(2, 'Hammer Mill', 'Paper');
 ```
 
-'''sql
+```sql
 --client
 INSERT INTO client VALUES(400, 'Sunmore Highschool', 2);
 ```
 
-'''sql
+```sql
 INSERT INTO works_with VALUES(105, 400, 55000);
 ```
 
