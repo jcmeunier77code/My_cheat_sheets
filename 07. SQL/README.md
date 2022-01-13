@@ -36,7 +36,7 @@ OR
 
 With simple/unique table
 
-<p align="center"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/07.%20SQL/student.png" width = '600' height = 'auto'></p>
+<p align="center"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/07.%20SQL/student.png" width = '450' height = 'auto'></p>
 <p align="center" font-size="20px">Figure 5. Simple table</p>
 
 ### Creating a table
