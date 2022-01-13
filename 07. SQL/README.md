@@ -642,14 +642,3 @@ For dropping a trigger (in command, console)
 ```console
 mysql> DROP TRIGGER my_trigger;
 ```
-
-```sql
-
-```
-
-
-```sql
-
-```
-
-
