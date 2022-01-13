@@ -295,4 +295,151 @@ CREATE TABLE branch_supplier (
 );
 ```
 
+### Inserting values within connected tables
+
+```sql
+--Corporate
+INSERT INTO employee VALUES(100, 'David', 'Wallace', '1967-11-17', 'M', 250000, NULL, NULL);
+
+INSERT INTO branch VALUES(1, 'Corporate', 100, '2006-02-09');
+
+UPDATE employee
+SET branch_id = 1
+WHERE emp_id = 100;
+
+INSERT INTO employee VALUES(101, 'Jan', 'Levinson', '1961-05-11', 'F', 11000, 100, 1);
+```
+
+```sql
+--Scranton
+INSERT INTO employee VALUES(102, 'Michael', 'Scott', '1967-11-17', 'M', 250000, NULL, NULL);
+
+INSERT INTO branch VALUES(2, 'Scranton', 102, '1992-02-09');
+
+UPDATE employee
+SET branch_id = 2
+WHERE emp_id = 102;
+
+INSERT INTO employee VALUES(103, 'Angela', 'Martin', '1971-05-11', 'F', 11000, 106, 2);
+```
+
+```sql
+--Stamford
+INSERT INTO employee VALUES(106, 'Josh', 'Porter', '1969-11-17', 'M', 250000, NULL, NULL);
+
+INSERT INTO branch VALUES(3, 'Stamford', 106, '1992-02-09');
+
+UPDATE employee
+SET branch_id = 2
+WHERE emp_id = 106;
+
+INSERT INTO employee VALUES(107, 'Andy', 'Bernard', '1973-05-11', 'F', 11000, 102, 2);
+```
+
+```sql
+--branch supplier 
+INSERT INTO branch_supplier VALUES(2, 'Hammer Mill', 'Paper');
+```
+
+'''sql
+--client
+INSERT INTO client VALUES(400, 'Sunmore Highschool', 2);
+```
+
+'''sql
+INSERT INTO works_with VALUES(105, 400, 55000);
+```
+
+### Select 
+
+'''sql
+--select all employees
+SELECT *
+FROM employee;
+```
+
+'''sql
+-- find all employees ordered by salary
+SELECT *
+FROM employee
+ORDER BY salary, sex DESC;
+```
+
+'''sql
+--find the first 5 employees
+SELECT *
+FROM employee
+LIMIT 5;
+```
+
+'''sql
+--find the first and last names of all employees
+SELECT first_name, last_name
+FROM employee;
+```
+
+'''sql
+--find the forename and surname of all employees
+SELECT first_name AS forename, last_name AS surname
+FROM employee;
+```
+
+'''sql
+--find out all the different genders
+SELECT DISTINCT sex
+FROM employee;
+```
+
+
+### Functions
+
+#### Count
+'''sql
+--find the number of employees
+SELECT COUNT(emp_id)
+FROM employee;
+```
+
+'''sql
+--find the number employees female born after 1978
+SELECT COUNT(emp_id)
+FROM employee
+WHERE sex = 'F' AND birth_date > '1970-01-01';
+```
+
+#### Average
+'''sql
+
+```
+
+
+'''sql
+
+```
+
+
+'''sql
+
+```
+
+
+'''sql
+
+```
+
+
+'''sql
+
+```
+
+
+'''sql
+
+```
+
+
+'''sql
+
+```
+
 
