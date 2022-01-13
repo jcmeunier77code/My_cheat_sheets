@@ -352,39 +352,39 @@ INSERT INTO works_with VALUES(105, 400, 55000);
 
 ### Select 
 
-'''sql
+```sql
 --select all employees
 SELECT *
 FROM employee;
 ```
 
-'''sql
+```sql
 -- find all employees ordered by salary
 SELECT *
 FROM employee
 ORDER BY salary, sex DESC;
 ```
 
-'''sql
+```sql
 --find the first 5 employees
 SELECT *
 FROM employee
 LIMIT 5;
 ```
 
-'''sql
+```sql
 --find the first and last names of all employees
 SELECT first_name, last_name
 FROM employee;
 ```
 
-'''sql
+```sql
 --find the forename and surname of all employees
 SELECT first_name AS forename, last_name AS surname
 FROM employee;
 ```
 
-'''sql
+```sql
 --find out all the different genders
 SELECT DISTINCT sex
 FROM employee;
@@ -394,13 +394,13 @@ FROM employee;
 ### Functions
 
 #### Count
-'''sql
+```sql
 --find the number of employees
 SELECT COUNT(emp_id)
 FROM employee;
 ```
 
-'''sql
+```sql
 --find the number employees female born after 1978
 SELECT COUNT(emp_id)
 FROM employee
