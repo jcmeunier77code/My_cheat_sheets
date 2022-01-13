@@ -585,7 +585,8 @@ message VARCHAR(100)
 
 ```sql
 -- set up a trigger when a new entry is added
-DELIMITER $$
+DELIMITER $$--set the delimiter to $$ instead of ; so that no conflict with the sql command that is nested (i.e. INSERT INTO)
+-- !!! delimiter cannot be changed in popsql, thus this command has to be run into the mysql console
 CREATE 
     TRIGGER my_trigger BEFORE INSERT 
     ON employee 
@@ -593,29 +594,41 @@ CREATE
         INSERT INTO trigger_test VALUES('add a new employee');
         --INSERT INTO trigger_test VALUES(NEW.first_name); alternative for adding the name of the employee instead of 'add a new employee'
     END$$
-DELIMITER;
+DELIMITER ; -- re-initialize the delimiter to ;
 ```
+
+Activating the trigger in the mysql console
+```console
+mysql> DELIMITER $$
+mysql> CREATE 
+    TRIGGER my_trigger BEFORE INSERT 
+    ON employee 
+    FOR EACH ROW BEGIN
+        INSERT INTO trigger_test VALUES('add a new employee');
+        --INSERT INTO trigger_test VALUES(NEW.first_name); alternative for adding the name of the employee instead of 'add a new employee'
+    END$$
+ mysql> DELIMITER ;
+ ```
 
 ```sql
 -- set up a trigger with IF statement when a new entry is added
-DELIMITER $$
+DELIMITER $$ 
 CREATE 
     TRIGGER my_trigger BEFORE INSERT 
     ON employee 
     FOR EACH ROW BEGIN
         IF NEW.sex = 'M' THEN
-            INSERT INTO trigger_test VALUES('added male employee');
+            INSERT INTO trigger_test VALUES('added male employee')
         ELIF NEW.sex = 'F' THEN
-            INSERT INTO trigger_test VALUES('added female');
+            INSERT INTO trigger_test VALUES('added female')
         ELSE
-            INSERT INTO trigger_test VALUES('added other type of employee');
+            INSERT INTO trigger_test VALUES('added other type of employee')
         END IF;
     END$$
-DELIMITER ;
+DELIMITER ; 
         
 SELECT * FROM trigger_test; 
 ```
-
 
 ```sql
 -- add an entry and tigger the trigger
