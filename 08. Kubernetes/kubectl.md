@@ -6,6 +6,7 @@ Find more information at: https://kubernetes.io/docs/reference/kubectl/overview/
 
 <details><summary>See basic comands</summary>
 <p>
+
 ```shell
 Basic Commands (Beginner):
   create        Create a resource from a file or from stdin
@@ -70,6 +71,7 @@ Usage:
 Use "kubectl <command> --help" for more information about a given command.
 Use "kubectl options" for a list of global command-line options (applies to all commands).
 ```
+
 </p>
 </details>
 
