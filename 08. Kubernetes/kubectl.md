@@ -83,18 +83,24 @@ starting minikube with docker specified
 minikube start --driver=docker
 ```
 
-
+check the status of the nodes 
 ```shell
-
+kubectl get nodes 
 ```
 
+check if minikube is running
 ```shell
-
+minikube status
 ```
 
+check kubernetes version 
 ```shell
-
+kubectl version
 ```
+
+kubectl cli: for configuring the minikube cluster 
+minikube cli: for stating/deleting the cluster
+
 
 ```shell
 
