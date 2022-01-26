@@ -117,7 +117,8 @@ minikube cli: for stating/deleting the cluster
 
 `kubectl get services`
 
-`kubectl create deployment nginx-depl --image=nginx`
+`kubectl create deployment nginx-depl --image=nginx`  
+see, for details on nginx example: https://www.nginx.com/
 
 usage:
 `kubectl create deployment NAME --image=IMAGE [--DRY-RUN] [options]`
@@ -183,17 +184,44 @@ Usage:
   kubectl create -f FILENAME [options]
 ```
 
+get information on deployment and on pod created 
+```shell
+kubectl get deployment
+kubectl get pods
+```
 
-`kubectl get deployment`
-
+replicaset: function to manage the replicas of a pod (done automatically)
 `kubectl get replicaset`
+ex. pod name : 
+nginx-depl-5ddc44dd46-zzncg
+namecreated-replicasetID-podID
+ex. id replicaset: nginx-depl-5ddc44dd46
+
 
 `kubectl edit deployment nginx-depl`
+-- auto-generated configuration file with default values 
+
 
 ### debugging
 `kubectl logs {pod-name}`
 
 `kubectl exec -it {pod-name} -- bin/bash`
+-- to execute the pod within powershell
+-- user become root and can enter the container/pod 
+-- to exit 'exit'
+-- see as example 
+
+```shell
+PS C:\Users\jcmeu> kubectl exec -it mongo-depl-85ddc6d66-7hsrn -- bin/bash
+root@mongo-depl-85ddc6d66-7hsrn:/# ls
+bin   data  docker-entrypoint-initdb.d  home        lib    lib64   media  opt   root  sbin  sys  usr
+boot  dev   etc                         js-yaml.js  lib32  libx32  mnt    proc  run   srv   tmp  var
+root@mongo-depl-85ddc6d66-7hsrn:/# exit
+exit
+PS C:\Users\jcmeu>
+```
+
+
 
 ### create mongo deployment
 `kubectl create deployment mongo-depl --image=mongo`
@@ -202,12 +230,97 @@ Usage:
 
 `kubectl describe pod mongo-depl-{pod-name}`
 
+details given by describe function 
+```shell
+PS C:\Users\jcmeu> kubectl describe pod mongo-depl-85ddc6d66-7hsrn
+Name:         mongo-depl-85ddc6d66-7hsrn
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Wed, 26 Jan 2022 16:44:15 +0100
+Labels:       app=mongo-depl
+              pod-template-hash=85ddc6d66
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.3
+IPs:
+  IP:           172.17.0.3
+Controlled By:  ReplicaSet/mongo-depl-85ddc6d66
+Containers:
+  mongo:
+    Container ID:   docker://3a242651af8f047a0df0409193a7aef665fc7b3e9a5910c1ee39c504f83979e2
+    Image:          mongo
+    Image ID:       docker-pullable://mongo@sha256:079089900e9511a782a59a4276046835189720eb668088869d147d1145cebe14
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Wed, 26 Jan 2022 16:44:32 +0100
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-9rvb7 (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  kube-api-access-9rvb7:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  8m23s  default-scheduler  Successfully assigned default/mongo-depl-85ddc6d66-7hsrn to minikube
+  Normal  Pulling    8m22s  kubelet            Pulling image "mongo"
+  Normal  Pulled     8m6s   kubelet            Successfully pulled image "mongo" in 16.059475036s
+  Normal  Created    8m6s   kubelet            Created container mongo
+  Normal  Started    8m6s   kubelet            Started container mongo
+```
+
 ### delete deplyoment
 `kubectl delete deployment mongo-depl`
 
 `kubectl delete deployment nginx-depl`
 
+see example for details 
+```shell
+PS C:\Users\jcmeu> kubectl get deployment
+NAME         READY   UP-TO-DATE   AVAILABLE   AGE
+mongo-depl   1/1     1            1           38m
+nginx-depl   1/1     1            1           65m
+PS C:\Users\jcmeu> kubectl get pod
+NAME                          READY   STATUS    RESTARTS   AGE
+mongo-depl-85ddc6d66-7hsrn    1/1     Running   0          38m
+nginx-depl-7d459cf5c8-v8m4d   1/1     Running   0          46m
+PS C:\Users\jcmeu> kubectl delete deployment nginx-depl
+deployment.apps "nginx-depl" deleted
+PS C:\Users\jcmeu> kubectl get deployment
+NAME         READY   UP-TO-DATE   AVAILABLE   AGE
+mongo-depl   1/1     1            1           41m
+PS C:\Users\jcmeu> kubectl get pod
+NAME                         READY   STATUS    RESTARTS   AGE
+mongo-depl-85ddc6d66-7hsrn   1/1     Running   0          41m
+PS C:\Users\jcmeu> kubectl get replicaset
+NAME                   DESIRED   CURRENT   READY   AGE
+mongo-depl-85ddc6d66   1         1         1       42m
+PS C:\Users\jcmeu>
+```
+
+
 ### create or edit config file
+When creating a deployment (create command) you cannot set up all the configurations/options in one line.
+Therefore, easier to work with ConfigFile which contains all the options and configuration. 
+
 `vim nginx-deployment.yaml`
 
 `kubectl apply -f nginx-deployment.yaml`
