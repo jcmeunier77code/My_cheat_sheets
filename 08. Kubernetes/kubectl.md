@@ -183,7 +183,15 @@ see, for details on nginx example: https://www.nginx.com/
 usage:
 `kubectl create deployment NAME --image=IMAGE [--DRY-RUN] [options]`
 
-kubectl create details 
+<details><summary>See basic comands</summary>
+<p>
+
+</p>
+</details>
+
+<details><summary>'create' command details</summary>
+<p>
+
 ```shell
 Create a resource from a file or from stdin.
 
@@ -239,6 +247,10 @@ annotation will be unchanged. This flag is useful when you want to perform kubec
 template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview].
       --validate=true: If true, use a schema to validate the input before sending it
       --windows-line-endings=true: Only relevant if --edit=true. Defaults to the line ending native to your platform.
+  
+</p>
+</details>
+
 
 Usage:
   kubectl create -f FILENAME [options]
