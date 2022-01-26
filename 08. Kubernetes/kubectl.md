@@ -76,6 +76,49 @@ minikube provisions and manages local Kubernetes clusters optimized for developm
 
 Find more information at: https://minikube.sigs.k8s.io/docs/start/
 
+## Starting minikube 
+
+starting minikube with docker specified 
+```shell
+minikube start --driver=docker
+```
+
+
+```shell
+
+```
+
+```shell
+
+```
+
+```shell
+
+```
+
+```shell
+
+```
+
+```shell
+
+```
+
+```shell
+
+```
+
+```shell
+
+```
+
+
+
+
+
+
+## Main commands
+
 ```shell
 
 Basic Commands:
