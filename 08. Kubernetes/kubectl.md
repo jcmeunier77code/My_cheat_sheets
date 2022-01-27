@@ -1,4 +1,9 @@
-# kubectl
+# Kubernetes
+
+[cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+
+
+## kubectl
 
 kubectl controls the Kubernetes cluster manager.
 
@@ -75,7 +80,7 @@ Use "kubectl options" for a list of global command-line options (applies to all 
 </p>
 </details>
 
-# Minikube
+## Minikube
 
 minikube provisions and manages local Kubernetes clusters optimized for development workflows.
 
@@ -136,7 +141,7 @@ Use "minikube <command> --help" for more information about a given command.
 </p>
 </details>
   
-## Starting minikube 
+## Starting 
 
 ### Create minikube cluster
 
