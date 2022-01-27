@@ -143,8 +143,9 @@ Use "minikube <command> --help" for more information about a given command.
   
 ## Starting 
 
-### Setting up a 'config' file 
+### Basics
 
+Setting up a 'config' file 
 ```shell
 echo @'
 apiVersion: v1
@@ -156,6 +157,22 @@ preferences: {}
 users:
 '@.\.kube\config
 ```
+
+To see which context is used 
+
+'kubectl config current-context'
+
+
+To change context 
+'kubectl config use-context prod'
+'kubectl config use-context stag'
+
+Please note that the AWS SSO credentials expire every 12 hours, in which case you might get an error from kubectl such as:
+
+'error: You must be logged in to the server (Unauthorized)'
+
+Use this command to refresh your session:
+'aws sso login --profile company-profile'
 
 ### Create minikube cluster
 
