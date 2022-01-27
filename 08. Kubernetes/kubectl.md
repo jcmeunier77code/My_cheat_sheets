@@ -160,7 +160,7 @@ users:
 
 To see which context is used 
 
-'kubectl config current-context'
+`kubectl config current-context`
 
 
 To change context 
