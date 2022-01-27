@@ -143,6 +143,20 @@ Use "minikube <command> --help" for more information about a given command.
   
 ## Starting 
 
+### Setting up a 'config' file 
+
+```shell
+echo @'
+apiVersion: v1
+clusters:
+contexts:
+current-context: staging
+kind: Config
+preferences: {}
+users:
+'@.\.kube\config
+```
+
 ### Create minikube cluster
 
 starting minikube with docker specified 
