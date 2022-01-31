@@ -58,126 +58,133 @@ Update the anaconda meta package
 
 
 ## Managing Environments
+
+Get a list of all my environments (Active environment shown with *)
+
 `conda info --envs`
 
-conda info -e
-
-Get a list of all my environments
-
-Active environment shown with *
-
-conda create --name snowflakes biopython
-
-conda create -n snowflakes biopython
+`conda info -e`
 
 Create an environment and install program(s)
 
-conda activate snowflakes
+`conda create --name snowflakes biopython`
+
+`conda create -n snowflakes biopython`
 
 Activate the new environment to use it
 
-conda deactivate
+`conda activate snowflakes`
 
 Deactivate the environment
 
-conda create -n bunnies python=3.4 astroid
+`conda deactivate`
 
 Create a new environment, specify Python version
 
-conda create -n flowers --clone snowflakes
+`conda create -n bunnies python=3.4 astroid`
 
 Make exact copy of an environment
 
-conda remove -n flowers --all
+`conda create -n flowers --clone snowflakes`
 
 Delete an environment
 
-conda env export > puppies.yml
+`conda remove -n flowers --all`
 
 Save current environment to a file
 
-conda env create -f puppies.yml
+`conda env export > puppies.yml`
 
 Load environment from a file
 
-## Managing Python
-conda search --full-name python
+`conda env create -f puppies.yml`
 
-conda search -f python
+
+## Managing Python
 
 Check versions of Python available to install
 
-conda create -n snakes python=3.4
+`conda search --full-name python`
+
+`conda search -f python`
 
 Install different version of Python in new environment
 
+`conda create -n snakes python=3.4`
+
+
 ## Managing .condarc Configuration
-conda config --get
 
 Get all keys and values from my .condarc file
 
-conda config --get channels
+`conda config --get`
 
 Get value of the key channels from .condarc file
 
-conda config --add channels pandas
+`conda config --get channels`
 
 Add a new value to channels so conda looks for packages in this location
 
+`conda config --add channels pandas`
+
+
 ## Managing Packages, Including Python
-conda list
 
 View list of packages and versions installed in active environment
 
-conda search beautiful-soup
+`conda list`
 
 Search for a package to see if it is available to conda install
 
-conda install -n bunnies beautiful-soup
+`conda search beautiful-soup`
 
 Install a new package
 
 NOTE: If you do not include the name of the environment, it will install in the current active environment.
 
-conda update beautiful-soup
+`conda install -n bunnies beautiful-soup`
 
 Update a package in the current environment
 
-conda search --override-channels -c pandas bottleneck
+`conda update beautiful-soup`
 
 Search for a package in a specific location (the pandas channel on Anaconda.org)
 
-conda install -c pandas bottleneck
+`conda search --override-channels -c pandas bottleneck`
 
 Install a package from a specific channel
 
-conda search --override-channels -c defaults beautiful-soup
+`conda install -c pandas bottleneck`
 
 Search for a package to see if it is available from the Anaconda repository
 
-conda install iopro accelerate
+`conda search --override-channels -c defaults beautiful-soup`
 
 Install commercial Continuum packages
 
-conda skeleton pypi pyinstrument
-
-conda build pyinstrument
+`conda install iopro accelerate`
 
 Build a Conda package from a Python Package Index (PyPi) Package
 
+`conda skeleton pypi pyinstrument`
+
+`conda build pyinstrument`
+
+
 ## Removing Packages or Environments
-conda remove --name bunnies beautiful-soup
 
 Remove one package from any named environment
 
-conda remove beautiful-soup
+`conda remove --name bunnies beautiful-soup`
 
 Remove one package from the active environment
 
-conda remove --name bunnies beautiful-soup astroid
+`conda remove beautiful-soup`
 
 Remove multiple packages from any environment
 
-conda remove --name snakes --all
+`conda remove --name bunnies beautiful-soup astroid`
 
 Remove an environment
+
+`conda remove --name snakes --all`
