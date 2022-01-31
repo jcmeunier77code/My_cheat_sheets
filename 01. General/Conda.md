@@ -45,19 +45,16 @@ conda remove -n myenv scipy
 
 ## Managing Conda and Anaconda
 Verify conda is installed, check version #
+
 `conda info`
 
-
 Update conda package and environment manager
+
 `conda update conda`
 
-
-
 Update the anaconda meta package
+
 `conda update anaconda`
-
-
-
 
 
 ## Managing Environments
