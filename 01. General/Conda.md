@@ -56,6 +56,16 @@ Update the anaconda meta package
 
 `conda update anaconda`
 
+## Check version of conda and of python 
+
+Use the `conda -V` Command to Check Anaconda Version
+Use the `conda --version` Command to Check Anaconda Version
+Use the `python -V` Command to Check Python Version
+Use the `python --version` Command to Check Python Version
+Use the `conda list anaconda$` Command to Check Anaconda Version
+Use the `conda list` Command to Check Both the Anaconda and Python Version
+Use the `conda info` Command to Check Anaconda and Python Version
+
 
 ## Managing Environments
 
