@@ -176,7 +176,7 @@ Use this command to refresh your session:
 
 `aws sso login --profile company-profile`
 
-## Start (tutorial example)
+## Minikube command (tutorial example)
 
 ### Create minikube cluster
 
@@ -213,12 +213,21 @@ kubectl version
 `minikube status`
 
 
-### Kubectl commands
+## Kubectl commands
+
+### Status of different K8s components
+
 `kubectl get nodes`
 
 `kubectl get pod`
 
 `kubectl get services`
+
+'kubectl get replicaset'
+
+'kubectl get deployment'
+
+### Crud command
 
 `kubectl create deployment nginx-depl --image=nginx`  see, for details on nginx example: https://www.nginx.com/
 
@@ -312,7 +321,7 @@ Replicaset name: namecreated-replicasetID
 - ex. id replicaset: nginx-depl-5ddc44dd46
 
 
-### Debugging
+### Debugging pods
 
 `kubectl logs {pod-name}`
 
