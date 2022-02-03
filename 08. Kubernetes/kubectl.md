@@ -456,7 +456,37 @@ PS C:\Users\jcmeu>
 When creating a deployment (create command) you cannot set up all the configurations/options in one line.
 Therefore, easier to work with ConfigFile which contains all the options and configuration. 
 
-`vim nginx-deployment.yaml`
+Powershell command for creating the yaml ConfigFile
+  
+`New-item nginx-deployment.yaml`  or `ni nginx-deployment.yaml`
+  
+Open it in notepad for completing/editing it (k8s automatically detect if deployment is to be created or updated), f.ex.:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.16
+        ports:
+        - containerPort: 8080
+```
+  
+
 
 `kubectl apply -f nginx-deployment.yaml`
 
