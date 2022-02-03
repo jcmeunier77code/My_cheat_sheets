@@ -416,7 +416,7 @@ Events:
 </details>
   
   
-### Delete deplyoment
+### Delete deployment
 
 `kubectl delete deployment mongo-depl`
 
@@ -499,6 +499,61 @@ spec:
 
 `kubectl delete -f nginx-deployment.yaml`
 
+  
+## ConfigFile (.yaml)
+  
+<details><summary>For deployment(nginx-deployment.yaml)</summary>
+<p>
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.16
+        ports:
+        - containerPort: 8080
+```
+</p>
+</details>  
+
+  
+<details><summary>For service (nginx-service.yaml)</summary>
+<p>
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+
+```
+</p>
+</details>  
+  
+Connecting deployment to service
+  
 ### Metrics
 
 Command for getting metrics
