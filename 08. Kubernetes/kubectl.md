@@ -501,6 +501,8 @@ spec:
 
   
 ## ConfigFile (.yaml)
+
+Deployment example  
   
 <details><summary>For deployment(nginx-deployment.yaml)</summary>
 <p>
@@ -532,7 +534,7 @@ spec:
 </details>  
 
   
-<details><summary>Output of 'describe deployment' command</summary>
+    <details><summary>Output of 'describe deployment' command</summary>
 <p>
   
 
@@ -577,6 +579,8 @@ Events:
 ```
 </p>
 </details>   
+
+Service example  
   
 <details><summary>For service (nginx-service.yaml)</summary>
 <p>
