@@ -532,6 +532,52 @@ spec:
 </details>  
 
   
+<details><summary>`kubectl describe deployment nginx-deployment`</summary>
+<p>
+  
+
+```shell
+PS C:\Users\jcmeu> kubectl describe deployment nginx-deployment
+Name:                   nginx-deployment
+Namespace:              default
+CreationTimestamp:      Thu, 03 Feb 2022 16:34:19 +0100
+Labels:                 app=nginx
+Annotations:            deployment.kubernetes.io/revision: 2
+Selector:               app=nginx
+Replicas:               2 desired | 1 updated | 3 total | 2 available | 1 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=nginx
+  Containers:
+   nginx:
+    Image:        nginx:1.25
+    Port:         8080/TCP
+    Host Port:    0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    False   ProgressDeadlineExceeded
+OldReplicaSets:  nginx-deployment-599bdddccc (2/2 replicas created)
+NewReplicaSet:   nginx-deployment-864d8cbd7f (1/1 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  51m   deployment-controller  Scaled up replica set nginx-deployment-599bdddccc to 5
+  Normal  ScalingReplicaSet  51m   deployment-controller  Scaled up replica set nginx-deployment-864d8cbd7f to 2
+  Normal  ScalingReplicaSet  51m   deployment-controller  Scaled down replica set nginx-deployment-599bdddccc to 4
+  Normal  ScalingReplicaSet  51m   deployment-controller  Scaled up replica set nginx-deployment-864d8cbd7f to 3
+  Normal  ScalingReplicaSet  25m   deployment-controller  Scaled down replica set nginx-deployment-599bdddccc to 2
+  Normal  ScalingReplicaSet  25m   deployment-controller  Scaled down replica set nginx-deployment-864d8cbd7f to 1  
+```
+</p>
+</details>   
+  
 <details><summary>For service (nginx-service.yaml)</summary>
 <p>
 
@@ -551,6 +597,32 @@ spec:
 ```
 </p>
 </details>  
+  
+
+<details><summary>`kubectl describe service nginx-service`</summary>
+<p>
+
+```shell
+PS C:\Users\jcmeu> kubectl describe service nginx-service
+Name:              nginx-service
+Namespace:         default
+Labels:            <none>
+Annotations:       <none>
+Selector:          app=nginx
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                10.97.246.168
+IPs:               10.97.246.168
+Port:              <unset>  80/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.17.0.3:8080,172.17.0.4:8080
+Session Affinity:  None
+Events:            <none>
+```
+</p>
+</details>  
+  
   
 Connecting deployment to service
   
