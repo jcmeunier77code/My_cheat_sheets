@@ -180,54 +180,49 @@ Use this command to refresh your session:
 
 ### Create minikube cluster
 
-starting minikube with docker specified 
+Starting minikube with docker specified 
 ```shell
 minikube start --driver=docker
 ```
 
-check the status of the nodes 
+Check the status of the nodes 
 ```shell
 kubectl get nodes 
 ```
 
-check if minikube is running
+Check if minikube is running
 ```shell
 minikube status
 ```
 
-check kubernetes version 
+Check kubernetes version 
 ```shell
 kubectl version
 ```
 
-kubectl cli: for configuring the minikube cluster 
-minikube cli: for stating/deleting the cluster
+##### Note
+- kubectl cli: for configuring the minikube cluster 
+- minikube cli: for stating/deleting the cluster
 
-### delete cluster and restart in debug mode
+### Delete cluster and restart in debug mode
+
 `minikube delete`
 
 `minikube start --vm-driver=hyperkit --v=7 --alsologtostderr`
 
 `minikube status`
 
-### kubectl commands
+
+### Kubectl commands
 `kubectl get nodes`
 
 `kubectl get pod`
 
 `kubectl get services`
 
-`kubectl create deployment nginx-depl --image=nginx`  
-see, for details on nginx example: https://www.nginx.com/
+`kubectl create deployment nginx-depl --image=nginx`  see, for details on nginx example: https://www.nginx.com/
 
-usage:
-`kubectl create deployment NAME --image=IMAGE [--DRY-RUN] [options]`
-
-<details><summary>See basic comands</summary>
-<p>
-
-</p>
-</details>
+Usage: `kubectl create deployment NAME --image=IMAGE [--DRY-RUN] [options]`
 
 <details><summary>'create' command details</summary>
 <p>
@@ -287,41 +282,47 @@ annotation will be unchanged. This flag is useful when you want to perform kubec
 template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview].
       --validate=true: If true, use a schema to validate the input before sending it
       --windows-line-endings=true: Only relevant if --edit=true. Defaults to the line ending native to your platform.
-  
+Usage:
+kubectl create -f FILENAME [options]
+```
 </p>
 </details>
 
-
-Usage:
-  kubectl create -f FILENAME [options]
-```
-
-get information on deployment and on pod created 
+Get information on deployment and on pod created 
 ```shell
 kubectl get deployment
 kubectl get pods
 ```
 
-replicaset: function to manage the replicas of a pod (done automatically)
-`kubectl get replicaset`
-ex. pod name : 
-nginx-depl-5ddc44dd46-zzncg
-namecreated-replicasetID-podID
-ex. id replicaset: nginx-depl-5ddc44dd46
+Replicaset: function to manage the replicas of a pod (done automatically)
+```shell
+kubectl get replicaset
+```
+
+Edit deployment (- auto-generated configuration file with default values)
+```shell
+kubectl edit deployment nginx-depl
+```
+
+##### Convention
+Pod name: namecreated-replicasetID-podID
+- ex: nginx-depl-5ddc44dd46-zzncg
+
+Replicaset name: namecreated-replicasetID
+- ex. id replicaset: nginx-depl-5ddc44dd46
 
 
-`kubectl edit deployment nginx-depl`
--- auto-generated configuration file with default values 
+### Debugging
 
-
-### debugging
 `kubectl logs {pod-name}`
 
 `kubectl exec -it {pod-name} -- bin/bash`
--- to execute the pod within powershell
--- user become root and can enter the container/pod 
--- to exit 'exit'
--- see as example 
+- to execute the pod within powershell
+- user become root and can enter the container/pod 
+- to exit 'exit'
+
+<details><summary>See as example</summary>
+<p>
 
 ```shell
 PS C:\Users\jcmeu> kubectl exec -it mongo-depl-85ddc6d66-7hsrn -- bin/bash
@@ -332,17 +333,20 @@ root@mongo-depl-85ddc6d66-7hsrn:/# exit
 exit
 PS C:\Users\jcmeu>
 ```
+</p>
+</details>
 
 
-
-### create mongo deployment
+### Create mongo deployment
 `kubectl create deployment mongo-depl --image=mongo`
 
 `kubectl logs mongo-depl-{pod-name}`
 
 `kubectl describe pod mongo-depl-{pod-name}`
 
-details given by describe function 
+<details><summary>'describe' command details</summary>
+<p>
+
 ```shell
 PS C:\Users\jcmeu> kubectl describe pod mongo-depl-85ddc6d66-7hsrn
 Name:         mongo-depl-85ddc6d66-7hsrn
@@ -398,13 +402,19 @@ Events:
   Normal  Created    8m6s   kubelet            Created container mongo
   Normal  Started    8m6s   kubelet            Started container mongo
 ```
+</p>
+</details>
+  
+  
+### Delete deplyoment
 
-### delete deplyoment
 `kubectl delete deployment mongo-depl`
 
 `kubectl delete deployment nginx-depl`
 
-see example for details 
+<details><summary>See as example</summary>
+<p>
+  
 ```shell
 PS C:\Users\jcmeu> kubectl get deployment
 NAME         READY   UP-TO-DATE   AVAILABLE   AGE
@@ -427,9 +437,12 @@ NAME                   DESIRED   CURRENT   READY   AGE
 mongo-depl-85ddc6d66   1         1         1       42m
 PS C:\Users\jcmeu>
 ```
+</p>
+</details>
+  
 
+### Create or edit config file
 
-### create or edit config file
 When creating a deployment (create command) you cannot set up all the configurations/options in one line.
 Therefore, easier to work with ConfigFile which contains all the options and configuration. 
 
@@ -441,14 +454,22 @@ Therefore, easier to work with ConfigFile which contains all the options and con
 
 `kubectl get deployment`
 
-### delete with config
+  
+### Delete with config
+
 `kubectl delete -f nginx-deployment.yaml`
 
 ### Metrics
 
-`kubectl top` The kubectl top command returns current CPU and memory usage for a cluster’s pods or nodes, or for a particular pod or node if specified.
+Command for getting metrics
+  
+`kubectl top` 
+
+- returns current CPU and memory usage for a cluster’s pods or nodes, or for a particular pod or node if specified.
 
 
+  
+  
 ```shell
 
 ```
@@ -470,5 +491,4 @@ Therefore, easier to work with ConfigFile which contains all the options and con
 
 
 
-## Main commands
 
