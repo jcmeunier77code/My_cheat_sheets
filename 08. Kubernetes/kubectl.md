@@ -141,9 +141,9 @@ Use "minikube <command> --help" for more information about a given command.
 </p>
 </details>
   
-## Starting 
+## Setting up 
 
-### Basics
+### Basics (concrete)
 
 Setting up a 'config' file 
 ```shell
@@ -175,6 +175,8 @@ Please note that the AWS SSO credentials expire every 12 hours, in which case yo
 Use this command to refresh your session:
 
 `aws sso login --profile company-profile`
+
+## Start (tutorial example)
 
 ### Create minikube cluster
 
