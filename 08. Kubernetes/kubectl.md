@@ -223,9 +223,10 @@ kubectl version
 
 `kubectl get services`
 
-'kubectl get replicaset'
+`kubectl get replicaset`
 
-'kubectl get deployment'
+`kubectl get deployment`
+
 
 ### Crud command
 
@@ -346,7 +347,7 @@ PS C:\Users\jcmeu>
 </details>
 
 
-### Create mongo deployment
+## Create mongo deployment
 `kubectl create deployment mongo-depl --image=mongo`
 
 `kubectl logs mongo-depl-{pod-name}`
