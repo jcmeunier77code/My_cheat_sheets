@@ -228,7 +228,7 @@ kubectl version
 `kubectl get deployment`
 
 
-### Crud command
+### Crud command (create, read, update, delete)
 
 `kubectl create deployment nginx-depl --image=nginx`  see, for details on nginx example: https://www.nginx.com/
 
