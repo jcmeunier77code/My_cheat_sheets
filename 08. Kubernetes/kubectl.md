@@ -534,7 +534,7 @@ spec:
 </details>  
 
   
-    <details><summary>Output of 'describe deployment' command</summary>
+<details><summary>Output of 'describe deployment' command</summary>
 <p>
   
 
