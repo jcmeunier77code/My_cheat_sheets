@@ -532,7 +532,7 @@ spec:
 </details>  
 
   
-<details><summary>`kubectl describe deployment nginx-deployment`</summary>
+<details><summary>Output of 'describe deployment' command</summary>
 <p>
   
 
@@ -599,7 +599,7 @@ spec:
 </details>  
   
 
-<details><summary>`kubectl describe service nginx-service`</summary>
+<details><summary>Output of 'describe service</summary>
 <p>
 
 ```shell
