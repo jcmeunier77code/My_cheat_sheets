@@ -774,7 +774,12 @@ $DecodedText = [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromB
 $DecodedText
 username
 ```  
- 
+
+### YAML files
+  
+  
+  
+  
 ### kubectl apply commands in order
 
 Secret need to be set up before mongo deployment  
@@ -813,17 +818,6 @@ ConfigMap need to be set up before mongo-express
 
 ```
 
-```shell
-
-```
-
-```shell
-
-```
-
-```shell
-
-```
 
 
 
