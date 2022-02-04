@@ -635,6 +635,8 @@ Get pod command with more details (ports specified
 ```shell
 kubectl get pod -o wide
 ```
+ 
+![get pod -o wide](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/kctl%20get%20pod%20wide.png)  
   
 ### Metrics
 
