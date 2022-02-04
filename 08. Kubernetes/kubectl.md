@@ -778,10 +778,12 @@ username
 ### kubectl apply commands in order
 
 Secret need to be set up before mongo deployment  
+
     kubectl apply -f mongo-secret.yaml
     kubectl apply -f mongo.yaml
 
 ConfigMap need to be set up before mongo-express  
+
     kubectl apply -f mongo-configmap.yaml 
     kubectl apply -f mongo-express.yaml
 
