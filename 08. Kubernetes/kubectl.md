@@ -227,6 +227,9 @@ kubectl version
 
 `kubectl get deployment`
 
+To get all the information from a project 
+
+`kubectl get all'
 
 ### Crud command (create, read, update, delete)
 
@@ -495,11 +498,6 @@ spec:
 `kubectl get deployment`
 
   
-### Delete with config
-
-`kubectl delete -f nginx-deployment.yaml`
-
-  
 ## ConfigFile (.yaml)
 
 ConfigFile has three parts:
@@ -730,19 +728,85 @@ status:
 ```
 </p>
 </details>  
+
+  
+### Delete with config
+
+`kubectl delete -f nginx-deployment.yaml`
+
+`kubectl delete -f nginx-service.yaml'
   
   
 ### Metrics
 
 Command for getting metrics
-  
-`kubectl top` 
-
 - returns current CPU and memory usage for a cluster’s pods or nodes, or for a particular pod or node if specified.
+  
+`kubectl top pod`
+  
+`kubectl top nodes'  
 
 
+## Demo project 
   
+[Project with mongoDB and mongo Express](https://gitlab.com/nanuchi/youtube-tutorial-series/-/tree/master/demo-kubernetes-components)  
+
+[mongo in dockerhub](https://hub.docker.com/_/mongo)
+
+[mongo-express in dockerhub](https://hub.docker.com/_/mongo-express)  
   
+### Encoding and decoding secret 
+
+PowerShell method for base64 encoding and decoding 'username' and 'password'
+
+Base64 encoding (for 'username')  
+```shell  
+$Text = ‘username’
+$Bytes = [System.Text.Encoding]::Unicode.GetBytes($Text)
+$EncodedText =[Convert]::ToBase64String($Bytes)
+$EncodedText
+dQBzAGUAcgBuAGEAbQBlAA==
+```
+  
+Base64 decoding (for 'username')
+```shell  
+$DecodedText = [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($EncodedText))
+$DecodedText
+username
+```  
+ 
+### kubectl apply commands in order
+
+Secret need to be set up before mongo deployment  
+    kubectl apply -f mongo-secret.yaml
+    kubectl apply -f mongo.yaml
+
+ConfigMap need to be set up before mongo-express  
+    kubectl apply -f mongo-configmap.yaml 
+    kubectl apply -f mongo-express.yaml
+
+### kubectl get commands
+
+    kubectl get pod
+    kubectl get pod --watch
+    kubectl get pod -o wide
+    kubectl get service
+    kubectl get secret
+    kubectl get all | grep mongodb
+
+### kubectl debugging commands
+
+    kubectl describe pod mongodb-deployment-xxxxxx
+    kubectl describe service mongodb-service
+    kubectl logs mongo-express-xxxxxx
+
+### give a URL to external service in minikube
+
+    minikube service mongo-express-service
+  
+
+  
+
 ```shell
 
 ```
