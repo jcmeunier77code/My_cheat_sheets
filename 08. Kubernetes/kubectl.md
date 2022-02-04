@@ -502,7 +502,7 @@ spec:
   
 ## ConfigFile (.yaml)
 
-Deployment example  
+### Deployment example  
   
 <details><summary>For deployment(nginx-deployment.yaml)</summary>
 <p>
@@ -580,7 +580,7 @@ Events:
 </p>
 </details>   
 
-Service example  
+### Service example  
   
 <details><summary>For service (nginx-service.yaml)</summary>
 <p>
@@ -628,7 +628,13 @@ Events:            <none>
 </details>  
   
   
-Connecting deployment to service
+### Check if deployment connected to service
+  
+Get pod command with more details (ports specified 
+  
+```shell
+kubectl get pod -o wide
+```
   
 ### Metrics
 
