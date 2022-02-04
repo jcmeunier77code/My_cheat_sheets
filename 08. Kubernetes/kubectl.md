@@ -777,7 +777,13 @@ username
 
 ### YAML files
   
+[mongo-secret.yaml](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mongo-secret.yaml)
   
+[mongo.yaml](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mongo.yaml)
+  
+[mongo-configmap.yaml](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mongo-configmap.yaml)
+
+[mongo-express.yaml](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mongo-express.yaml)
   
   
 ### kubectl apply commands in order
