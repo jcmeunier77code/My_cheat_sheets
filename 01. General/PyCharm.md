@@ -2,24 +2,49 @@
 
 ## Cheatsheet
 
-[cheatsheet](
+[cheatsheet](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/PyCharm_ReferenceCard.pdf)
 
 ## Shortcuts
 
-ctrl + w : select word + extended selection
+> using shortcut in interactive menus:'alt' and letters to type are highlighted
+> everytime you want to find an action goto the search by typing shift shift 
+> Quick switch theme: ctrl + `(personalized: ctrl+µ)
 
-ctrl d : duplicate line 
+### Create and edit
 
-ctrl y: suppre line 
+Select word + extended selection
 
-ctrl z: undo 
+    ctrl + w  
+    ctrl + w + W +W 
 
-ctrl+shift up: move line up 
-ctrl+shift down: move line down 
+Duplicate line 
+
+    ctrl + d 
+
+Suppress line
+
+    ctrl + y  
+
+Undo
+
+    ctrl + z  
+
+### Format
+
+Move up/down line
+
+    ctrl+shift up 
+    ctrl+shift down
 
 ctrl+alt L: format
 
 ctrl+ shift + enter: enter without cutting line 
+
+tab: indent selection
+shift + tab: unindent selection
+ctrl + alt + i: auto-indent
+
+### Search 
 
 shift+shift: search tool
 ctrl+shift+a: search actions (with shortcut)
@@ -32,37 +57,13 @@ alt+F7: find usages
 ctrl + E: recent file 
 ctrl+shift+E: recent location
 
-
-tab: indent selection
-shift + tab: unindent selection
-ctrl + alt + i: auto-indent
-
 ctrl+F12: open structure of file  
-
-extract/refactor 
-
-ctrl + alt + V: variables
-ctrl + alt + C: constant 
-ctrl + alt + F: field
-ctrl + alt + P: parameter
-ctrl + alt + M: method
-
-inline(undo extract/refactor)
-
-shift + F6: rename
-
-using shortcut in interactive menus:'alt' and letters to type are highlighted
 
 find ctrl + f
 find in path ctrl + shift + f
 
 
-find and replace ctrl +f and then ctrl + r
-find and replace in path ctrl + shift + r
-
-
-!!! everytime you want to find an action goto the search by typing shift shift  !!!
-
+### Navigate
 
 switch window 
 
@@ -77,9 +78,29 @@ terminal: alt + f12
 escape to get back
 shift +escape: to get back and to close active pane
 
+### Refactor
+
+extract/refactor 
+
+ctrl + alt + V: variables
+ctrl + alt + C: constant 
+ctrl + alt + F: field
+ctrl + alt + P: parameter
+ctrl + alt + M: method
+
+inline(undo extract/refactor)
+
+shift + F6: rename
+
+find and replace ctrl +f and then ctrl + r
+find and replace in path ctrl + shift + r
+
 Creating a test: ctrl + shift + t
 
-Quick switch theme: ctrl + `(personalized: ctrl+µ)
+
+
+### Version control
+
 VCS operations: alt + ` (personalized: alt+µ)
 
 How to disable VCS on a project:
