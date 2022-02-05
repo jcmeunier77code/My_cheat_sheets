@@ -145,7 +145,7 @@ Use "minikube <command> --help" for more information about a given command.
 
 ### Basics (concrete)
 
-Setting up a 'config' file 
+Setting up a 'config' file. 
 ```shell
 echo @'
 apiVersion: v1
