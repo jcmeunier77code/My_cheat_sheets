@@ -7,7 +7,9 @@
 ## Shortcuts
 
 > using shortcut in interactive menus:'alt' and letters to type are highlighted
+
 > everytime you want to find an action goto the search by typing shift shift 
+
 > Quick switch theme: ctrl + `(personalized: ctrl+µ)
 
 ### Create and edit
@@ -15,7 +17,7 @@
 Select word + extended selection
 
     ctrl + w  
-    ctrl + w + W +W 
+    ctrl + w + w + w 
 
 Duplicate line 
 
@@ -33,77 +35,127 @@ Undo
 
 Move up/down line
 
-    ctrl+shift up 
-    ctrl+shift down
+    ctrl + shift + up 
+    ctrl + shift + down
 
-ctrl+alt L: format
+Format
 
-ctrl+ shift + enter: enter without cutting line 
+    ctrl + alt + l 
 
-tab: indent selection
-shift + tab: unindent selection
-ctrl + alt + i: auto-indent
+Enter without cutting line 
+
+    ctrl + shift + enter 
+
+Indent selection
+
+    tab 
+
+Unindent selection
+
+    shift + tab 
+
+Auto-indent
+
+    ctrl + alt + i 
 
 ### Search 
 
-shift+shift: search tool
-ctrl+shift+a: search actions (with shortcut)
+Search tool
 
-ctrl + f: search in a file 
-ctrl + shift + f: search in the whole project
+    shift + shift 
 
-alt+F7: find usages
+Search actions (with shortcut)
 
-ctrl + E: recent file 
-ctrl+shift+E: recent location
+    ctrl + shift + a
 
-ctrl+F12: open structure of file  
+Search in a file 
 
-find ctrl + f
-find in path ctrl + shift + f
+    ctrl + f
 
+Search in the whole project
+
+    ctrl + shift + f
+
+Find usages
+
+    alt + F7
+
+Recent file 
+
+    ctrl + e
+
+Recent location
+
+    ctrl + shift + e
+
+Open structure of file  
+
+    ctrl + F12
+
+Find 
+
+    ctrl + f
+
+Find in path 
+
+    ctrl + shift + f
 
 ### Navigate
 
-switch window 
+Switch window 
 
-project: alt + 1
-structure: alt + 7
-bookmark: alt + 2
-version control: alt + 9 
-run: shift + f12
-problems: alt + 6 
-terminal: alt + f12
+    project: alt + 1
+    structure: alt + 7
+    bookmark: alt + 2
+    version control: alt + 9 
+    run: shift + F12
+    problems: alt + 6 
+    terminal: alt + f12
 
-escape to get back
-shift +escape: to get back and to close active pane
+To get back
+
+    esc 
+
+To get back and to close active pane
+
+    shift + esc 
 
 ### Refactor
 
-extract/refactor 
+Extract/refactor 
 
-ctrl + alt + V: variables
-ctrl + alt + C: constant 
-ctrl + alt + F: field
-ctrl + alt + P: parameter
-ctrl + alt + M: method
+    ctrl + alt + v: variables
+    ctrl + alt + c: constant 
+    ctrl + alt + f: field
+    ctrl + alt + p: parameter
+    ctrl + alt + m: method
 
-inline(undo extract/refactor)
+Inline(undo extract/refactor)
 
-shift + F6: rename
+    ctrl + alt + n
 
-find and replace ctrl +f and then ctrl + r
-find and replace in path ctrl + shift + r
+Rename
 
-Creating a test: ctrl + shift + t
+    shift + F6 
 
+Find and replace 
 
+    ctrl + f and then ctrl + r
+    in path: ctrl + f and ctrl + shift + r
+
+Creating a test
+
+    ctrl + shift + t
 
 ### Version control
 
-VCS operations: alt + ` (personalized: alt+µ)
+VCS operations: 
+
+    alt + ` 
+    alt + µ (personalized)
 
 How to disable VCS on a project:
-1. File -> settings -> Version control -> directory mapping
-2. Select project 
-3. Press '-' button to delete and disable VCS
+
+    1. File -> settings -> Version control -> directory mapping
+    2. Select project 
+    3. Press '-' button to delete and disable VCS
