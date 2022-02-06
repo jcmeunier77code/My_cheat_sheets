@@ -330,9 +330,9 @@ Replicaset name: namecreated-replicasetID
 `kubectl logs {pod-name}`
 
 `kubectl exec -it {pod-name} -- bin/bash`
-- to execute the pod within powershell
-- user become root and can enter the container/pod 
-- to exit 'exit'
+- to execute the pod within powershell;
+- user become root and can enter the container/pod; 
+- to exit 'exit'.
 
 <details><summary>See as example</summary>
 <p>
