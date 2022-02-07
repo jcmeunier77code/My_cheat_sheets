@@ -260,17 +260,16 @@ Don't worry: Git will tell you :-)
 
 You can always undo and start fresh!
 
-![mc5](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc5.png)
+<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc5.png" width="500"></p>
 
-![mc6](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc6.png)
+<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc6.png" width="500"></p>
 
 
 ### What conflicts *actually* look like
 
 Just characters in a file!
 
-![mc7](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc7.png)
-
+<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc7.png" width="500"></p>
 
 ### How to solve the conflict 
 
