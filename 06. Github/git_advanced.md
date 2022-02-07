@@ -172,32 +172,32 @@ For that purpose, creating a fork which is a personnal copy of a repository
 
     - Clone the repository locally
     
-    cd path_where_to_put_the_cloned_repository
-    git clone https://github.com/my_github/repository_name.git
+        cd path_where_to_put_the_cloned_repository
+        git clone https://github.com/my_github/repository_name.git
     
     - Go inside the repository
     
-    cd repository_name 
+        cd repository_name 
 
 3. (optional) Creating a PullRequest if you want your changes to be reviewed be the code owner
 
     - Create a new branch (branch where you'll make the changes) 
     
-    git branch new_branch_name
+        git branch new_branch_name
     
     - Go to this branch
     
-    git checkout new_branch_name
+        git checkout new_branch_name
     
     - After you've made the changes you want to submit
     
-    git status
-    git add (* for all or only file_changed)
-    git commit -m "the changes I've made"
+        git status
+        git add (* for all or only file_changed)
+        git commit -m "the changes I've made"
     
     - Push the changes in your remote repository (your GitHub page)
     
-    git push --set-upstream origin new_branch_name
+        git push --set-upstream origin new_branch_name
     
     - On your GitHub forked repository, the changes have been made and GitHub detect automatically that this is a forked repository and ask if we want to send a pull request to the code owner
 
