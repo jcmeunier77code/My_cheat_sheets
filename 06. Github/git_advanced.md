@@ -279,7 +279,14 @@ Simply **clean up** the file with, for example, a mergetool which allows you to 
 
 Or, in command line interface
 
+```shell
+git mergetool
+```
+
 ![mc8](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc8.png)
+
+<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc9.png" width="600"></p>
+
 
 
 ## Merge vs. Rebase
