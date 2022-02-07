@@ -179,17 +179,23 @@ For that purpose, creating a fork which is a personnal copy of a repository
 
     - Go inside the repository
     
-    `cd repository_name`
-
+    ```shell
+    cd repository_name
+    ```
+    
 3. (optional) Creating a PullRequest if you want your changes to be reviewed be the code owner
 
     - Create a new branch (branch where you'll make the changes) 
     
-    `git branch new_branch_name`
+    ```shell
+    git branch new_branch_name
+    ```
     
     - Go to this branch
     
-    `git checkout new_branch_name`
+    ```shell
+    git checkout new_branch_name
+    ```
     
     - After you've made the changes you want to submit
     
@@ -201,7 +207,9 @@ For that purpose, creating a fork which is a personnal copy of a repository
     
     - Push the changes in your remote repository (your GitHub page)
     
-    `git push --set-upstream origin new_branch_name`
+    ```shell
+    git push --set-upstream origin new_branch_name
+    ```
     
     - On your GitHub forked repository, the changes have been made and GitHub detect automatically that this is a forked repository and ask if we want to send a pull request to the code owner
 
