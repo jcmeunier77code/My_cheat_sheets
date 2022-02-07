@@ -38,7 +38,7 @@ In the vim
     - give details 
     - press :wq to save and escape 
 
-o to logs to check change 
+Go to logs to check change 
 
     git log 
 
@@ -172,9 +172,10 @@ For that purpose, creating a fork which is a personnal copy of a repository
 
     - Clone the repository locally
 
-    `cd path_where_to_put_the_cloned_repository
-    git clone https://github.com/my_github/repository_name.git`
-
+    ```shell
+    cd path_where_to_put_the_cloned_repository
+    git clone https://github.com/my_github/repository_name.git
+    ```
 
     - Go inside the repository
     
@@ -184,21 +185,23 @@ For that purpose, creating a fork which is a personnal copy of a repository
 
     - Create a new branch (branch where you'll make the changes) 
     
-        git branch new_branch_name
+    `git branch new_branch_name`
     
     - Go to this branch
     
-        git checkout new_branch_name
+    `git checkout new_branch_name`
     
     - After you've made the changes you want to submit
     
-        git status
-        git add (* for all or only file_changed)
-        git commit -m "the changes I've made"
+    ```shell
+    git status
+    git add (* for all or only file_changed)
+    git commit -m "the changes I've made"
+    ```
     
     - Push the changes in your remote repository (your GitHub page)
     
-        git push --set-upstream origin new_branch_name
+    `git push --set-upstream origin new_branch_name`
     
     - On your GitHub forked repository, the changes have been made and GitHub detect automatically that this is a forked repository and ask if we want to send a pull request to the code owner
 
