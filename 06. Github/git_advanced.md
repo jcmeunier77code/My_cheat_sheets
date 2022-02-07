@@ -260,7 +260,7 @@ Don't worry: Git will tell you :-)
 
 You can always undo and start fresh!
 
-<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc5.png" width="500"></p>
+<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc5.png" width="400"></p>
 
 <p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc6.png" width="500"></p>
 
@@ -269,7 +269,7 @@ You can always undo and start fresh!
 
 Just characters in a file!
 
-<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc7.png" width="500"></p>
+<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc7.png" width="600"></p>
 
 ### How to solve the conflict 
 
