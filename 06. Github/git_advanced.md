@@ -108,14 +108,14 @@ Typically:
 
 ### Two example branching strategies
 
-1. Github flow
+#### 1. Github flow
 
 - very simple, very lean: only one long-running branch ("main") + feature branches
-- 
+ 
 
 ![branch5](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/branch5.png)
 
-2. Gitflow
+#### 2. Gitflow
 
 - more structure, more rules
 - long-running: "main" + "develop"
@@ -123,11 +123,13 @@ Typically:
 
 ![branch6](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/branch6.png)
 
+
 ### The "best" branching model ? 
 
 - consider your project, release cycle, and team
 - take inspiration from existing models (like "GitFlow" or "GitHub Flow")
 - ...and create your own model!
+
 
 ## Pull requests
 
@@ -144,6 +146,7 @@ With pull request
 ![pr3](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/pr3.png)
 
 > Pull request are always based on branches and not on individual commits !
+
 > - creating a new branch where we request changes to be reviewed
 
 
@@ -160,6 +163,7 @@ For that purpose, creating a fork which is a personnal copy of a repository
 ![pr5](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/pr5.png)
 
 ![pr6](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/pr6.png)
+
 
 ### How to proceed to fork a repository,make changes appropriately and send pull requests
 
@@ -354,6 +358,7 @@ Step 2
 Then Git makes a new commit that applies to branch-B
 
 <p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr8.png"></p>
+
 > At this stage,  temporarily, both branches look the same
 
 Step 3
@@ -361,6 +366,7 @@ Step 3
 The parked/saved commit is re-integrated (rebased) on top of the commits integrated in branch-B 
 
 <p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr9.png"></p>
+
 > Results is that the commits history looks like a straight (there is no merge history)
 
 #### Warning notice
