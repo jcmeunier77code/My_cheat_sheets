@@ -171,7 +171,8 @@ For that purpose, creating a fork which is a personnal copy of a repository
 2. In command line interface
 
     - Clone the repository locally
-    
+   
+   
         cd path_where_to_put_the_cloned_repository
         git clone https://github.com/my_github/repository_name.git
     
