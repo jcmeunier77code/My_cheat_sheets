@@ -216,9 +216,74 @@ For that purpose, creating a fork which is a personnal copy of a repository
 ![pr7](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/pr7.png)
 
     
-## Merge conflict
+## Merge conflicts
+
+1. When they might occur 
+2. What they actually are 
+3. How to solve them
 
 
-    
-    
+### How and when conflicts occur
+
+When integrating commits from different sources
+
+![mc1](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc1.png)
+
+> All these commands perform some kind of integration and this is where merge conflicts can happened
+
+
+### Merging changes in Git 
+
+A flawless process, most of the time!
+
+![mc2](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc2.png)
+
+But when **contradictory** changes happen
+
+![mc3](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc3.png)
+
+> This situation requires a decision from a human
+
+Other situations where it can happened:
+- when a file was modified in one branch and deleted in another
+- ...
+
+
+### How do you know when a conflict has occured ?
+
+Don't worry: Git will tell you :-)
+
+![mc4](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc4.png)
+
+
+### How to undo a conflict and start over ?
+
+You can always undo and start fresh!
+
+![mc5](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc5.png)
+
+![mc6](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc6.png)
+
+
+### What conflicts *actually* look like
+
+Just characters in a file!
+
+![mc7](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc7.png)
+
+
+### How to solve the conflict 
+
+Simply **clean up** the file with, for example, a mergetool which allows you to select the changes to keep/to suppress
+
+[see pycharm mergetool](https://www.jetbrains.com/help/pycharm/resolving-conflicts.html)
+
+Or, in command line interface
+
+![mc8](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc8.png)
+
+
+## Merge vs. Rebase
+
+
     
