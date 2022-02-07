@@ -172,12 +172,13 @@ For that purpose, creating a fork which is a personnal copy of a repository
 
     - Clone the repository locally
 
-    cd path_where_to_put_the_cloned_repository
-    git clone https://github.com/my_github/repository_name.git
-    
+    'cd path_where_to_put_the_cloned_repository
+    git clone https://github.com/my_github/repository_name.git'
+
+
     - Go inside the repository
     
-        cd repository_name 
+    'cd repository_name'
 
 3. (optional) Creating a PullRequest if you want your changes to be reviewed be the code owner
 
