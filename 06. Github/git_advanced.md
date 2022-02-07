@@ -131,9 +131,74 @@ Typically:
 
 ## Pull requests
 
+### Communicating about and reviewing code
+
+Without pull request
+
+![pr1](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/pr1.png)
+
+With pull request
+
+![pr2](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/pr2.png)
+
+![pr3](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/pr3.png)
+
+> Pull request are always based on branches and not on individual commits !
+> - creating a new branch where we request changes to be reviewed
 
 
+### Contributing code to other repositories
 
+Think about popular public repositories: 
+- you might have nice ideas... 
+- ...but you're not allowed to push code and/or to make changes
 
+![pr4](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/pr4.png)
 
+For that purpose, creating a fork which is a personnal copy of a repository
 
+![pr5](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/pr5.png)
+
+![pr6](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/pr6.png)
+
+### How to proceed to fork a repository,make changes appropriately and send pull requests
+
+1. On GitHub
+
+    - fork the repository to make a copy on your own GitHub
+    - get the code (button on the up right corner) of your GitHube copy of the repository
+
+2. In command line interface
+
+    - Clone the repository locally
+    cd path_where_to_put_the_cloned_repository
+    git clone https://github.com/my_github/repository_name.git
+    
+    - Go inside the repository
+    cd repository_name 
+
+3. (optional) Creating a PullRequest if you want your changes to be reviewed be the code owner
+
+    - Create a new branch (branch where you'll make the changes) 
+    git branch new_branch_name
+    
+    - Go to this branch
+    git checkout new_branch_name
+    
+    - After you've made the changes you want to submit
+    git status
+    git add (* for all or only file_changed)
+    git commit -m "the changes I've made"
+    
+    - Push the changes in your remote repository (your GitHub page)
+    git push --set-upstream origin new_branch_name
+    
+    - On your GitHub forked repository, the changes have been made and GitHub detect automatically that this is a forked repository and ask if we want to send a pull request to the code owner
+
+![pr7](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/pr7.png)
+
+    
+    
+    
+    
+    
