@@ -8,9 +8,9 @@
 ### perfect commit message 
 1. subject = cooncise summary of what happened 
 2. Body = more detailed explanation 
-- what is now different than before ?
-- what is the reason for the change ?
-- Is there anythhing to watch out for/anything particularly remarkable ?
+    - what is now different than before ?
+    - what is the reason for the change ?
+    - Is there anythhing to watch out for/anything particularly remarkable ?
 
 If difficult to stay concise, it is maybe an hint that you put to many thing in the commit
 
@@ -78,7 +78,7 @@ Agree on a branching workflow in your team
 
 ### Two main types of branches 
 
-1. Long-running branches 
+#### 1. Long-running branches 
 
 - exists through the complete lifetime of the project
 - often, they mirror "stages" in your dev life cycle
@@ -97,7 +97,7 @@ Typically:
 
 
 
-2. Short-lived branches
+#### 2. Short-lived branches
 
 - for new features, bug fixes, refactoring, experiments...
 - will be deleted after integration (merge/rebase)
