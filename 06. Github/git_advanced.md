@@ -260,7 +260,15 @@ Don't worry: Git will tell you :-)
 
 You can always undo and start fresh!
 
-<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc5.png" width="400"></p>
+```shell
+git merge --abort
+```
+
+or 
+
+```shell 
+git rebase --abort
+```
 
 <p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mc6.png" width="500"></p>
 
@@ -294,15 +302,15 @@ git mergetool
 
 #### A simplified scenario
 
-<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr1.png" width="600"></p>
+<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr1.png"></p>
 
 A fast forward merge
 
-<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr2.png" width="600"></p>
+<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr2.png"></p>
 
 #### A more realistic scenario
 
-<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr3.png" width="600"></p>
+<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr3.png"></p>
 
 A merge commit: 
 - When two or multiple branches move forward differently, git has to make a commit on the merge 
@@ -311,7 +319,7 @@ A merge commit:
     - automatically created by Git
     - do not content content documentation/descritpion of the changes; need to go to the branches' commit history to see what was changed 
 
-<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr4.png" width="600"></p>
+<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr4.png"></p>
 
 ### How do a rebase work
 
@@ -320,14 +328,14 @@ A merge commit:
 Not better or worse than merge, just different
 If you don't want to go with the automatic merge commit and want the project history looks like a straight line
 
-<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr5.png" width="600"></p>
+<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr5.png"></p>
 
 
 #### Rebase - step by step
 
 1. The starting situation
 
-<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr6.png" width="600"></p>
+<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr6.png"></p>
 
 2. Starting the rebase 
 
@@ -339,20 +347,20 @@ Step 1
 
 First git remove all commits on branch-A that happen after the split (saved somewhere temporarily)
 
-<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr7.png" width="600"></p>
+<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr7.png" width="1000"></p>
 
 Step 2
 
 Then Git makes a new commit that applies to branch-B
 
-<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr8.png" width="600"></p>
+<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr8.png"></p>
 > At this stage,  temporarily, both branches look the same
 
 Step 3
 
 The parked/saved commit is re-integrated (rebased) on top of the commits integrated in branch-B 
 
-<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr9.png" width="600"></p>
+<p align="left"><img src="https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/mr9.png"></p>
 > Results is that the commits history looks like a straight (there is no merge history)
 
 #### Warning notice
@@ -365,4 +373,5 @@ One thing to understand with rebase:
     - but if you do so on commit that already have been published/pushed to a remote repository, you might get in trouble (because other developpers might have based their work on the commit c3 (which is no longer here, the new one is c3*)
 
 > do **not** use rebase on commits that you've already pushed/shared on a remote repository !
+
 > instead, use it for cleaning up your local commit history before merging into a shared team branch
