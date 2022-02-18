@@ -1,6 +1,6 @@
 # Git & GitHub
 
-![Cheatsheet](
+![Cheatsheet](https://github.com/jcmeunier77code/My_cheat_sheets/blob/master/.img/Git%20cheat%20sheet%20light%20(FINAL).png)
 
 [Link](https://dev.to/doabledanny/git-cheat-sheet-50-commands-free-pdf-and-poster-4gcn)
 
