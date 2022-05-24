@@ -44,6 +44,12 @@ Install jupyter notebook
 pip install jupyter notebook
 ```
 
+Install requirements file
+```
+pip install -r requirements.txt
+```
+
+
 ## Managing kernels
 
 List all existing kernell
