@@ -32,7 +32,7 @@ git reset --hard HEAD~1
 than force push changes to revert commit in the remote directory 
 
 ```
-git push --FORCE 
+git push --force 
 ```
 
 > don't do that in master or in dev branch !!!!
