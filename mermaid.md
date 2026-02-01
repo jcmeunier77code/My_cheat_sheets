@@ -43,3 +43,44 @@ graph LR
     style Ano-Detox fill:#e7f5ff,stroke:#1971c2,stroke-width:2px
     style Output fill:#ebfbee,stroke:#2f9e44,stroke-width:2px
 ```
+
+```mermaid
+graph LR
+    %% Define Nodes
+    
+    Input["**Input JSON**
+    {
+    'commentaire_id': '125487',
+    'original_text': 'Monsieur Marc Dupont est un connard de fonctionnaire'
+    }"]
+
+    Prompt{{"**System Prompt**<br/>
+    Rewrite this text - return only the final text in the original language 
+    - remove profanity/inappropriate language 
+    - replace PII (names, addresses, etc.) with category tags 
+    - e.g., [UN CITOYEN] in French"}}
+
+    Ano_Detox{{"**Anonymize, Detoxification & Paraphrasing**
+    **LLM, mistral-large2**
+    'params: {temp: 0.0, tokens: 8192}'"}}
+
+    Output["**Output JSON**
+    {
+    'commentaire_id': '125487',
+    'original_text': '...',
+    'lang_detect': 'FR',
+    'processed_text': '< UN CITOYEN > est un fonctionnaire'
+    }"]
+
+    %% Define Connections
+    Input --> Prompt
+    Prompt --> Ano_Detox
+    Ano_Detox --> Output
+    
+
+    %% Styling
+    style Input fill:#fff4e6,stroke:#f59f00,stroke-width:2px
+    style Prompt fill:#e7f5ff,stroke:#1971c2,stroke-width:2px
+    style Ano_Detox fill:#e7f5ff,stroke:#1971c2,stroke-width:2px
+    style Output fill:#ebfbee,stroke:#2f9e44,stroke-width:2px
+```
