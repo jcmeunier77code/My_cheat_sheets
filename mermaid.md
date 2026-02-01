@@ -4,8 +4,8 @@ graph LR
     %% Define Nodes
     Input["**Input JSON**<br/>
     {<br/>
-    "'commentaire_id': '125487',<br/>
-    'original_text': 'Monsieur Marc Dupont est un connard de fonctionnaire'<br/>"
+    'commentaire_id': '125487',<br/>
+    'original_text': 'Monsieur Marc Dupont est un connard de fonctionnaire'<br/>
     }"]
 
     Prompt{{"**System Prompt**<br/>
