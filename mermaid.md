@@ -9,7 +9,7 @@ graph LR
     }"]
 
     Prompt{{"**System Prompt**<br/>
-    Rewrite this text - return only the final text in the original language 
+    Rewrite this text - only the final text in the original language 
     - to remove all profanity and inappropriate language while preserving 
     the rest aside from identifyable information 
     - for example : names, postal addresses, phone numbers, email addresses, license plates - 
@@ -55,7 +55,7 @@ graph LR
     }"]
 
     Prompt{{"**System Prompt**<br/>
-    Rewrite this text - return only the final text in the original language 
+    Rewrite this text - only the final text in the original language 
     - remove profanity/inappropriate language 
     - replace PII (names, addresses, etc.) with category tags 
     - e.g., [UN CITOYEN] in French"}}
