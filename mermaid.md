@@ -28,7 +28,7 @@ graph LR
     'commentaire_id': '125487',
     'original_text': '...',
     'lang_detect': 'FR',
-    'processed_text': '< UN CITOYEN > est un fonctionnaire'
+    'processed_text': '&lt; UN CITOYEN &gt est un fonctionnaire'
     }"]
 
     %% Define Connections
